@@ -1,0 +1,12 @@
+version : '3'
+services:
+
+  php:
+    build: .
+    image: jud3v/twitter_academy_epitech:latest
+    volumes:
+      - ./:/var/www/html
+      - /var/log/apache2/app:/var/log/apache2/
+      - ./public/images/:/var/www/html/public/images/
+    ports:
+      - "80:80"
